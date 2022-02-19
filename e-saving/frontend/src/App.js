@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { BrowserRouter, Link, Route } from "react-router-dom";
+import { BrowserRouter, Link, Route, Switch } from "react-router-dom";
 import { signout } from "./actions/userActions";
 import AdminRoute from "./components/AdminRoute";
 import PrivateRoute from "./components/PrivateRoute";
@@ -30,7 +30,7 @@ import MapScreen from "./screens/MapScreen";
 import DashboardScreen from "./screens/DashboardScreen";
 import SupportScreen from "./screens/SupportScreen";
 import ChatBox from "./components/ChatBox";
-import NotFound from "./components/NotFound";
+import PageNotFoundScreen from "./screens/PageNotFoundScreen";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -250,7 +250,6 @@ function App() {
           ></SellerRoute>
 
           <Route path='/' component={HomeScreen} exact></Route>
-          <Route path='*' component={NotFound} />
         </main>
         <footer className='row center'>
           {userInfo && !userInfo.isAdmin && <ChatBox userInfo={userInfo} />}
