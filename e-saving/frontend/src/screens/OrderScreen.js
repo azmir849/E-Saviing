@@ -192,15 +192,16 @@ export default function OrderScreen(props) {
                       )}
                       {loadingPay && <LoadingBox></LoadingBox>}
 
-                      <PayPalButton
+                      {/* <PayPalButton
                         amount={order.totalPrice}
                         onSuccess={successPaymentHandler}
-                      ></PayPalButton>
+                      ></PayPalButton> */}
                     </>
                   )}
                 </li>
               )}
-              {userInfo.isAdmin && order.isPaid && !order.isDelivered && (
+              {/* {userInfo.isAdmin && order.isPaid && !order.isDelivered && ( */}
+              {userInfo.isAdmin && !order.isDelivered && (
                 <li>
                   {loadingDeliver && <LoadingBox></LoadingBox>}
                   {errorDeliver && (
@@ -212,6 +213,21 @@ export default function OrderScreen(props) {
                     onClick={deliverHandler}
                   >
                     Deliver Order
+                  </button>
+                </li>
+              )}
+              {userInfo.isAdmin && order.isDelivered && (
+                <li>
+                  {loadingDeliver && <LoadingBox></LoadingBox>}
+                  {errorDeliver && (
+                    <MessageBox variant='danger'>{errorDeliver}</MessageBox>
+                  )}
+                  <button
+                    type='button'
+                    className='primary block'
+                    onClick={successPaymentHandler}
+                  >
+                    Update Payment Status If Paid By User
                   </button>
                 </li>
               )}
