@@ -321,7 +321,7 @@ img.large {
 .search input {
   border-radius: 0.5rem 0 0 0.5rem;
   border-right: none;
-  margin-left: 1000px;
+  margin-left: 900px;
 }
 .active {
   font-weight: bold;
@@ -683,4 +683,7 @@ img.large {
   color: #fe980f;
   font-style: italic;
   text-decoration: underline;
+}
+/* Carousel */
+#CarouselID {
 }
