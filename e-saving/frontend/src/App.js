@@ -58,13 +58,13 @@ function App() {
         <div class='container-fluid'>
           <header className='row header-bottom'>
             <div>
-              <button
+              {/* <button
                 type='button'
                 className='open-sidebar'
                 onClick={() => setSidebarIsOpen(true)}
               >
                 <i className='fa fa-bars'></i>
-              </button>
+              </button> */}
               <Link className='brand' to='/'>
                 amazona
               </Link>
@@ -90,7 +90,7 @@ function App() {
                   </Link>
                   <ul className='dropdown-content'>
                     <li>
-                      <Link to='/profile'>User Profile</Link>
+                      <Link to='/profile'>Profile</Link>
                     </li>
                     <li>
                       <Link to='/orderhistory'>Order History</Link>
@@ -115,7 +115,7 @@ function App() {
                       <Link to='/productlist/seller'>Products</Link>
                     </li>
                     <li>
-                      <Link to='/orderlist/seller'>Orders</Link>
+                      <Link to='/orderlist/seller'>Orders </Link>
                     </li>
                   </ul>
                 </div>
@@ -246,7 +246,11 @@ function App() {
           path='/orderlist/seller'
           component={OrderListScreen}
         ></SellerRoute>
-
+        <Route
+          path='/pageNumber/:pageNumber'
+          component={HomeScreen}
+          exact
+        ></Route>
         <Route path='/' component={HomeScreen} exact></Route>
       </main>
 

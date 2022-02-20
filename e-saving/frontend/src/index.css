@@ -275,7 +275,7 @@ img.large {
   position: absolute;
   display: none;
   right: 0;
-  min-width: 12rem;
+  min-width: 14rem;
   padding: 1rem;
   z-index: 1;
   background-color: #f3e5c8;
@@ -285,6 +285,12 @@ img.large {
 }
 .dropdown:hover .dropdown-content {
   display: block;
+}
+.user_info input,
+select,
+textarea {
+  width: 50% !important;
+  color: #f08000 !important;
 }
 /* Checkout Steps */
 .checkout-steps > div {
@@ -377,6 +383,7 @@ img.large {
 }
 
 /* Pagination */
+
 .pagination a {
   padding: 1rem;
   margin: 0.5rem;

@@ -58,10 +58,10 @@ export default function SearchScreen(props) {
         ) : error ? (
           <MessageBox variant='danger'>{error}</MessageBox>
         ) : (
-          <div>{products.length} Results</div>
+          <h1>{products.length} Results</h1>
         )}
         <div>
-          Sort by{" "}
+          Filter Products By :{" "}
           <select
             value={order}
             onChange={(e) => {
@@ -76,7 +76,7 @@ export default function SearchScreen(props) {
         </div>
       </div>
       <div className='row top'>
-        <div className='col-1'>
+        <div className='col-2'>
           <h3>Department</h3>
           <div>
             {loadingCategories ? (
@@ -106,7 +106,7 @@ export default function SearchScreen(props) {
               </ul>
             )}
           </div>
-          <div>
+          <div className='mt-5'>
             <h3>Price</h3>
             <ul>
               {prices.map((p) => (
@@ -123,7 +123,7 @@ export default function SearchScreen(props) {
               ))}
             </ul>
           </div>
-          <div>
+          <div className='mt-5'>
             <h3>Avg. Customer Review</h3>
             <ul>
               {ratings.map((r) => (
@@ -139,7 +139,7 @@ export default function SearchScreen(props) {
             </ul>
           </div>
         </div>
-        <div className='col-3'>
+        <div className='col-10'>
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
