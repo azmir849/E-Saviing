@@ -216,7 +216,17 @@ img.large {
   margin-bottom: 0.5rem;
 }
 .price {
+  justify-self: start;
   font-size: 2rem;
+}
+.BuyBtn a {
+  color: #000000;
+}
+.BuyBtn :hover {
+  background-color: #ff8b06;
+}
+.BuyBtn a :hover {
+  color: #000000;
 }
 /* Rating */
 .rating span {

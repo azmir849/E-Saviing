@@ -18,7 +18,16 @@ export default function Product(props) {
           rating={product.rating}
           numReviews={product.numReviews}
         ></Rating>
-        <div className='price'>${product.price}</div>
+        <div className='row mt-5'>
+          <div className='price'>${product.price}</div>
+          <div className='BuyBtn'>
+            <Link to={`/product/${product._id}`}>
+              <button type='button' className='small'>
+                <Link to={`/product/${product._id}`}>Buy Now</Link>
+              </button>
+            </Link>
+          </div>
+        </div>
       </div>
     </div>
   );
