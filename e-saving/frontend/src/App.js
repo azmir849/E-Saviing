@@ -31,7 +31,6 @@ import DashboardScreen from "./screens/DashboardScreen";
 import SupportScreen from "./screens/SupportScreen";
 import ChatBox from "./components/ChatBox";
 import FooterScreen from "./screens/FooterScreen";
-import HeaderTop from "./components/Header/HeaderTop";
 
 function App() {
   const cart = useSelector((state) => state.cart);
@@ -55,7 +54,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div id='footer' className='container-fluid'>
+      <div id='Header' className='container-fluid'>
         <div class='container-fluid'>
           <header className='row header-bottom'>
             <div>

@@ -60,14 +60,14 @@ export default function ProductScreen(props) {
         <div>
           <Link to='/'>Go Back</Link>
           <div className='row top'>
-            <div className='col-2'>
+            <div className='col-4'>
               <img
                 className='large'
                 src={product.image}
                 alt={product.name}
               ></img>
             </div>
-            <div className='col-1'>
+            <div className='col-4'>
               <ul>
                 <li>
                   <h1>{product.name}</h1>
@@ -85,7 +85,7 @@ export default function ProductScreen(props) {
                 </li>
               </ul>
             </div>
-            <div className='col-1'>
+            <div className='col-4'>
               <div className='card card-body'>
                 <ul>
                   <li>
