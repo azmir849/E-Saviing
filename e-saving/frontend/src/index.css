@@ -126,6 +126,7 @@ a.brand {
   margin-right: 50px;
 }
 .categoryClass {
+  margin-top: 100px;
   align-items: flex-start;
 }
 .row.center {
@@ -235,7 +236,7 @@ img.large {
 }
 /* Rating */
 .rating span {
-  color: #f0c040;
+  color: #f08000;
   margin: 0.1rem;
 }
 .rating span:last-child {
