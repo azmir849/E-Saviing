@@ -129,7 +129,7 @@ export default function ProductListScreen(props) {
               ))}
             </tbody>
           </table>
-          <div className='row center pagination'>
+          <div className='row pagination d-flex justify-content-center'>
             {[...Array(pages).keys()].map((x) => (
               <Link
                 className={x + 1 === page ? "active" : ""}

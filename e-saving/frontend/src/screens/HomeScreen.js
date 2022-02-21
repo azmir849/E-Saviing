@@ -6,7 +6,8 @@ import MessageBox from "../components/MessageBox";
 import { useDispatch, useSelector } from "react-redux";
 import { listProductCategories, listProducts } from "../actions/productActions";
 import HomeCarouselScreen from "./HomeCarouselScreen";
-import { Link, useParams } from "react-router-dom";
+import { Link, Route, useParams } from "react-router-dom";
+import BrandSearchBox from "../components/BrandSearchBox";
 
 export default function HomeScreen() {
   const { pageNumber = 1 } = useParams();
@@ -30,12 +31,12 @@ export default function HomeScreen() {
 
   return (
     <div className=''>
-      <h2>Product category and feature products</h2>
+      {/* <h2>Product category and feature products</h2> */}
       <HomeCarouselScreen />
 
       <div className='row categoryClass'>
         <div className='col-2'>
-          <h2>Categories</h2>
+          <h1 className='bold'>Categories</h1>
           {loadingCategories ? (
             <LoadingBox></LoadingBox>
           ) : errorCategories ? (
@@ -47,10 +48,18 @@ export default function HomeScreen() {
               </li>
             ))
           )}
+          <h1 className='bold mt-5'>Find Your Brand</h1>
+          <div>
+            <Route
+              render={({ history }) => (
+                <BrandSearchBox history={history}></BrandSearchBox>
+              )}
+            ></Route>
+          </div>
         </div>
 
         <div className='col-10'>
-          <h2 className='text-center'>Feature Products</h2>
+          <h1 className='text-center bold'>Feature Products</h1>
           {loading ? (
             <LoadingBox></LoadingBox>
           ) : error ? (
@@ -64,7 +73,7 @@ export default function HomeScreen() {
           )}
         </div>
       </div>
-      <div className='row center pagination'>
+      <div className='row pagination d-flex justify-content-center'>
         {[...Array(pages).keys()].map((x) => (
           <Link
             className={x + 1 === page ? "active" : ""}

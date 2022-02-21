@@ -75,6 +75,7 @@ button {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 button {
   background-color: #f8f8f8;
   cursor: pointer;
@@ -84,6 +85,10 @@ select:hover,
 textarea:hover,
 button:hover {
   border: 0.1rem #ff8000 solid;
+}
+#BrandSearchBTN {
+  margin-top: 10px;
+  padding: 0px 80px;
 }
 button.primary {
   background-color: #ff8000;
@@ -299,7 +304,7 @@ img.large {
 .user_info input,
 select,
 textarea {
-  width: 50% !important;
+  width: 100% !important;
   color: #f08000 !important;
 }
 /* Checkout Steps */

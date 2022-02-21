@@ -143,9 +143,12 @@ function FooterScreen() {
                 </span>
               </p>
               <p class='pull-right'>
-                Develop by{" "}
+                Developed by{" "}
                 <span>
-                  <a target='_blank' href='http://www.themeum.com'>
+                  <a
+                    target='_blank'
+                    href='https://azmir-portfolio.netlify.app/'
+                  >
                     AH Naeem
                   </a>
                 </span>

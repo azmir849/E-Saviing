@@ -77,7 +77,7 @@ export default function SearchScreen(props) {
       </div>
       <div className='row top'>
         <div className='col-2'>
-          <h3>Department</h3>
+          <h3>Categories</h3>
           <div>
             {loadingCategories ? (
               <LoadingBox></LoadingBox>
