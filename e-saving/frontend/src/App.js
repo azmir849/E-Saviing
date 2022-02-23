@@ -66,7 +66,7 @@ function App() {
                 <i className='fa fa-bars'></i>
               </button> */}
               <Link className='brand' to='/'>
-                amazona
+                E-Shopper
               </Link>
             </div>
             <div className=''>
@@ -228,6 +228,11 @@ function App() {
         ></AdminRoute>
         <AdminRoute
           path='/orderlist'
+          component={OrderListScreen}
+          exact
+        ></AdminRoute>
+        <AdminRoute
+          path='/orderlist/pageNumber/:pageNumber'
           component={OrderListScreen}
           exact
         ></AdminRoute>

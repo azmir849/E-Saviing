@@ -11,14 +11,22 @@ orderRouter.get(
   isAuth,
   isSellerOrAdmin,
   expressAsyncHandler(async (req, res) => {
+    const pageSize = 9;
+    const page = Number(req.query.pageNumber) || 1;
     const seller = req.query.seller || "";
     const sellerFilter = seller ? { seller } : {};
 
-    const orders = await Order.find({ ...sellerFilter }).populate(
-      "user",
-      "name"
-    );
-    res.send(orders);
+    const count = await Order.find({
+      ...sellerFilter,
+    });
+
+    const orders = await Order.find({
+      ...sellerFilter,
+    })
+      .populate("user", "name")
+      .skip(pageSize * (page - 1))
+      .limit(pageSize);
+    res.send({ orders, page, pages: Math.ceil(count.length / pageSize) });
   })
 );
 
