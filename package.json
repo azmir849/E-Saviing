@@ -2,22 +2,15 @@
   "name": "e-shopper",
   "type": "module",
   "version": "1.0.0",
-  "description": "Ecommerce Website Like Amazon",
+  "description": "E-Shopper is a Ecommerce Website Like Amazon",
   "main": "index.js",
   "scripts": {
     "build": "cd frontend && npm install && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/azmir849/E-Saviing/tree/master/e-saving"
-  },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/azmir849/E-Saviing/tree/master/e-saving/issues"
-  },
-  "homepage": "https://github.com/azmir849/E-Saviing/tree/master/e-saving#readme",
+
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^8.2.0",
