@@ -2,7 +2,7 @@
   "name": "e-shopper",
   "type": "module",
   "version": "1.0.0",
-  "description": "Ecommerce website like amazon",
+  "description": "Ecommerce Website Like Amazon",
   "main": "index.js",
   "scripts": {
     "start": "nodemon server.js"
