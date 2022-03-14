@@ -5,7 +5,7 @@
   "description": "E-Shopper is a Ecommerce Website Like Amazon",
   "main": "index.js",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd ./e-saving/frontend && npm install && npm run build",
     "start": "nodemon --watch backend --exec node --experimental-modules backend/server.js"
   },
   "author": "",
