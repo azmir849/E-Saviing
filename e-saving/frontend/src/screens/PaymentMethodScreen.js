@@ -31,10 +31,9 @@ export default function PaymentMethodScreen(props) {
               value='PayPal'
               name='paymentMethod'
               required
-              disabled
               onChange={(e) => setPaymentMethod(e.target.value)}
             ></input>
-            <label htmlFor='paypal'>PayPal (Not available)</label>
+            <label htmlFor='paypal'>PayPal</label>
           </div>
         </div>
         <div>

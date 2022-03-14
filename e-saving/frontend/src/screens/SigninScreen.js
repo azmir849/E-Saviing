@@ -39,7 +39,7 @@ export default function SigninScreen(props) {
           <input
             type="email"
             id="email"
-            placeholder="Enter email"
+            placeholder="e.g: admin@example.com"
             // defaultValue='admin@example.com'
             required
             onChange={(e) => setEmail(e.target.value)}
@@ -50,7 +50,7 @@ export default function SigninScreen(props) {
           <input
             type="password"
             id="password"
-            placeholder="Enter password"
+            placeholder="e.g:123456"
             // defaultValue='123456'
             required
             onChange={(e) => setPassword(e.target.value)}
